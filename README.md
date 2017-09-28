@@ -28,6 +28,8 @@ Use `comeon update` to fetch the newest data source of `comeon` from [GitHub](ht
 
 Contributions are always welcome, we'd love to have your helping hand on `comeon`.
 
+Your favourite document isn't covered? Add it to [lib/database.json](https://github.com/sqrthree/comeon/blob/master/lib/database.json) to help us improve it together.
+
 ## License
 
 `comeon` is licensed under the [MIT](https://github.com/sqrthree/comeon/blob/master/LICENSE).

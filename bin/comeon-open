@@ -22,12 +22,14 @@ var openDocument = function openDocument (name) {
     return
   }
 
-  opn(url)
+  opn(url, {
+    wait: false,
+  }).then(function () {
+    logger.info(':link:  Opened ' + url)
+    logger.footer()
 
-  logger.info(':link:  Opened ' + url)
-  logger.footer()
-
-  process.exit(0)
+    process.exit(0)
+  })
 }
 
 program
