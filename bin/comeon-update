@@ -1,0 +1,11 @@
+#!/usr/bin/env node
+
+var cache = require('../lib/cache')
+var logger = require('../lib/logger')
+
+cache.update().then(function () {
+  logger.success('Already up-to-date.')
+  logger.footer()
+}).catch(function (err) {
+  return logger.error(err.message)
+})

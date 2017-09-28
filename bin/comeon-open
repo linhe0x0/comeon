@@ -1,0 +1,38 @@
+#!/usr/bin/env node
+
+var program = require('commander')
+var opn = require('opn')
+var logger = require('../lib/logger')
+var docs = require('../lib/document')
+
+var openDocument = function openDocument (name) {
+  var doc = docs[name]
+
+  if (!doc) {
+    logger.error('Document ' + name + ' is not found.')
+    logger.contribute()
+    return
+  }
+
+  var url = doc.document || doc.homepage
+
+  if (!url) {
+    logger.error('the document or homepage of document ' + name + ' is not found.')
+    logger.contribute()
+    return
+  }
+
+  opn(url)
+
+  logger.info(':link:  Opened ' + url)
+  logger.footer()
+
+  process.exit(0)
+}
+
+program
+  .usage('<name>')
+  .description('open the document for the specified package')
+  .action(openDocument)
+
+program.parse(process.argv)

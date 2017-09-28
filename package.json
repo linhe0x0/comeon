@@ -1,0 +1,51 @@
+{
+  "name": "comeon",
+  "version": "0.1.0",
+  "description": "🍺  Fast, simple, flexible, usefully command line tool for developers to open documents with the fastest way.",
+  "keywords": [
+    "document",
+    "document-manager",
+    "command-line"
+  ],
+  "author": "sqrtthree <imsqrtthree@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/sqrthree/comeon/issues"
+  },
+  "homepage": "https://github.com/sqrthree/comeon#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sqrthree/comeon.git"
+  },
+  "license": "MIT",
+  "preferGlobal": true,
+  "main": "bin/comeon",
+  "bin": {
+    "comeon": "bin/comeon",
+    "comeon-open": "bin/comeon-open",
+    "comeon-update": "bin/comeon-update"
+  },
+  "scripts": {
+    "lint": "standard",
+    "lint-with-fix": "standard --fix",
+    "test": "NODE_ENV=testing mocha --recursive",
+    "cover": "NODE_ENV=testing nyc --reporter=html --reporter=text mocha --recursive"
+  },
+  "dependencies": {
+    "commander": "^2.11.0",
+    "lodash": "^4.17.4",
+    "node-emoji": "^1.8.1",
+    "opn": "^5.1.0",
+    "request": "^2.83.0",
+    "update-notifier": "^2.2.0"
+  },
+  "devDependencies": {
+    "mocha": "^3.5.3",
+    "nyc": "^11.2.1",
+    "rewire": "^2.5.2",
+    "should": "^13.1.0",
+    "standard": "^10.0.3"
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  }
+}

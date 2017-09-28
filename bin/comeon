@@ -1,0 +1,22 @@
+#!/usr/bin/env node
+
+var updateNotifier = require('update-notifier')
+var program = require('commander')
+var pkg = require('../package.json')
+
+program
+  .version(pkg.version)
+  .description(pkg.description)
+  .usage('<name>')
+  .command('open [name]', 'open the document for the specified package', {
+    isDefault: true,
+  })
+  .command('update', 'update cache to keep it up-to-date with upstream')
+
+program.parse(process.argv)
+
+var notifier = updateNotifier({
+  pkg: pkg,
+})
+  
+notifier.notify()
