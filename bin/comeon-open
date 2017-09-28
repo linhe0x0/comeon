@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 var program = require('commander')
+var os = require('os')
 var opn = require('opn')
 var logger = require('../lib/logger')
 var docs = require('../lib/document')
@@ -22,9 +23,15 @@ var openDocument = function openDocument (name) {
     return
   }
 
-  opn(url, {
-    wait: false,
-  }).then(function () {
+  var platform = os.platform()
+
+  var options = {}
+
+  if (platform !== 'win32') {
+    options.wait = false
+  }
+
+  opn(url, options).then(function () {
     logger.info(':link:  Opened ' + url)
     logger.footer()
 
