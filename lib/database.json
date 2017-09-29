@@ -7,6 +7,10 @@
     "document": "https://facebook.github.io/react/docs/hello-world.html",
     "homepage": "https://facebook.github.io/react/"
   },
+  "react-native": {
+    "document": "http://facebook.github.io/react-native/docs/getting-started.html",
+    "homepage": "http://facebook.github.io/react-native/"
+  },
   "vue": {
     "document": "https://vuejs.org/v2/guide/",
     "homepage": "https://vuejs.org/"
