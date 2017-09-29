@@ -11,6 +11,10 @@
     "document": "https://ant.design/docs/react/introduce-cn",
     "homepage": "https://ant.design"
   },
+  "bootstrap": {
+    "document": "https://getbootstrap.com/docs/4.0/getting-started/introduction/",
+    "homepage": "http://getbootstrap.com/"
+  },
   "node": {
     "document": "https://nodejs.org/dist/latest-v8.x/docs/api/",
     "homepage": "https://nodejs.org/"
