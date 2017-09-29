@@ -1,0 +1,78 @@
+#!/usr/bin/env node
+
+var path = require('path')
+var fs = require('fs')
+var _ = require('lodash')
+var inquirer = require('inquirer')
+var validator = require('validator')
+
+var currentDirname = process.cwd()
+var documentFile = path.resolve(__dirname, '../lib/database.json')
+
+if (!currentDirname.endsWith('comeon')) {
+  console.log('Warning! This is a private and experimental command, now just for contributions, and it is likely to break in future releases. Go to https://github.com/sqrthree/comeon#contributing to get more details.')
+  process.exit(0)
+}
+
+var notEmpty = function notEmpty (answer) {
+  return answer ? true : 'Please input the value'
+}
+
+var isURL = function isURL (answer) {
+  return validator.isURL(answer) ? true : 'Please input the valid url'
+}
+
+var sort = function sort (obj) {
+  var keys = Object.keys(obj).sort()
+  var result = {}
+
+  keys.forEach(function (key) {
+    result[key] = obj[key]
+  })
+
+  return result
+}
+
+inquirer.prompt([
+  {
+    type: 'input',
+    name: 'name',
+    message: 'package name: ',
+    validate: notEmpty,
+  },
+  {
+    type: 'input',
+    name: 'homepage',
+    message: 'homepage: ',
+    validate: isURL,
+  },
+  {
+    type: 'input',
+    name: 'document',
+    message: 'document: ',
+    validate: isURL,
+  },
+]).then(function (answers) {
+  var outDocument = JSON.parse(fs.readFileSync(documentFile, 'utf8'))
+
+  if (outDocument[answers.name]) {
+    throw new Error('package ' + answers.name + 'is already exists. if you want to update this package, Please edit the file directly.')
+  }
+
+  var newDocument = _.assign({}, outDocument, {
+    [answers.name]: {
+      document: answers.document,
+      homepage: answers.homepage,
+    }
+  })
+
+  var sortedDocument = sort(newDocument)
+
+  fs.writeFileSync(documentFile, JSON.stringify(sortedDocument, null, 2), 'utf8')
+
+  console.log()
+  console.log('feat(database): :+1: Add ' + answers.name + ' to database.json')
+  console.log('✨  Done.')
+}).catch(function (err) {
+  console.error(err)
+})
