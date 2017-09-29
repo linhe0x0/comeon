@@ -1,4 +1,12 @@
 {
+  "angular": {
+    "document": "https://angular.io/docs",
+    "homepage": "https://angular.io/"
+  },
+  "angular-cn": {
+    "document": "https://angular.cn/docs",
+    "homepage": "https://angular.cn/"
+  },
   "node": {
     "document": "https://nodejs.org/dist/latest-v8.x/docs/api/",
     "homepage": "https://nodejs.org/"
@@ -18,13 +26,5 @@
   "vue-cn": {
     "document": "https://cn.vuejs.org/v2/guide/",
     "homepage": "https://cn.vuejs.org/"
-  },
-  "angular": {
-    "document": "https://angular.io/docs",
-    "homepage": "https://angular.io/"
-  },
-  "angular-cn": {
-    "document": "https://angular.cn/docs",
-    "homepage": "https://angular.cn/"
   }
 }
