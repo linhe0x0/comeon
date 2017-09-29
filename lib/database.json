@@ -7,6 +7,10 @@
     "document": "https://angular.cn/docs",
     "homepage": "https://angular.cn/"
   },
+  "antd": {
+    "document": "https://ant.design/docs/react/introduce-cn",
+    "homepage": "https://ant.design"
+  },
   "node": {
     "document": "https://nodejs.org/dist/latest-v8.x/docs/api/",
     "homepage": "https://nodejs.org/"
