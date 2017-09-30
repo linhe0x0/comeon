@@ -3,9 +3,16 @@ language: node_js
 node_js:
   - stable
 
+before_install:
+  - npm install -g greenkeeper-lockfile@1
+
+before_script: greenkeeper-lockfile-update
+
 script:
   - npm test
   - npm run cover
 
 after_success:
   - npm run coveralls
+
+after_script: greenkeeper-lockfile-upload
