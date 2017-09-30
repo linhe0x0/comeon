@@ -1,7 +1,6 @@
 # comeon
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/sqrthree/comeon.svg)](https://greenkeeper.io/)
-
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 [![npm](https://img.shields.io/npm/v/comeon.svg)](https://www.npmjs.com/package/comeon)
 [![npm](https://img.shields.io/npm/l/comeon.svg)](https://www.npmjs.com/package/comeon)
