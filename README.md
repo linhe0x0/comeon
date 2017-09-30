@@ -5,6 +5,7 @@
 [![npm](https://img.shields.io/npm/l/comeon.svg)](https://www.npmjs.com/package/comeon)
 [![Build Status](https://travis-ci.org/sqrthree/comeon.svg?branch=master)](https://travis-ci.org/sqrthree/comeon)
 [![Coverage Status](https://coveralls.io/repos/github/sqrthree/comeon/badge.svg?branch=master)](https://coveralls.io/github/sqrthree/comeon?branch=master)
+[![David](https://img.shields.io/david/sqrthree/comeon.svg)](https://www.npmjs.com/package/comeon)
 
 > :beer: :rocket:  Fast, simple, flexible, usefully command line tool for developers to open documents with the fastest way. based on [Node.js](https://nodejs.org/en/).
 
