@@ -71,7 +71,7 @@ inquirer.prompt([
   fs.writeFileSync(documentFile, JSON.stringify(sortedDocument, null, 2), 'utf8')
 
   console.log()
-  console.log('feat(database): :+1: Add ' + answers.name + ' to database.json')
+  console.log('feat(database): :+1: Add \`' + answers.name + '\` to database.json')
   console.log('✨  Done.')
 }).catch(function (err) {
   console.error(err)
