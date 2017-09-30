@@ -31,6 +31,10 @@
     "document": "http://facebook.github.io/react-native/docs/getting-started.html",
     "homepage": "http://facebook.github.io/react-native/"
   },
+  "react-router": {
+    "document": "https://reacttraining.com/react-router/web/",
+    "homepage": "https://reacttraining.com/react-router/"
+  },
   "vue": {
     "document": "https://vuejs.org/v2/guide/",
     "homepage": "https://vuejs.org/"
