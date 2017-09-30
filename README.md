@@ -1,6 +1,7 @@
 # comeon
 
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![Build Status](https://travis-ci.org/sqrthree/comeon.svg?branch=master)](https://travis-ci.org/sqrthree/comeon)
 [![Coverage Status](https://coveralls.io/repos/github/sqrthree/comeon/badge.svg?branch=master)](https://coveralls.io/github/sqrthree/comeon?branch=master)
 
 > :beer: :rocket:  Fast, simple, flexible, usefully command line tool for developers to open documents with the fastest way. based on [Node.js](https://nodejs.org/en/).
