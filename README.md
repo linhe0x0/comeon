@@ -8,6 +8,8 @@
 [![Coverage Status](https://coveralls.io/repos/github/sqrthree/comeon/badge.svg?branch=master)](https://coveralls.io/github/sqrthree/comeon?branch=master)
 [![David](https://img.shields.io/david/sqrthree/comeon.svg)](https://www.npmjs.com/package/comeon)
 
+[中文介绍](./README-zh.md)
+
 > :beer: :rocket:  Fast, simple, flexible, usefully command line tool for developers to open documents with the fastest way. based on [Node.js](https://nodejs.org/en/).
 
 ## Installation
@@ -32,7 +34,7 @@ Use `comeon update` to fetch the newest data source of `comeon` from [GitHub](ht
 
 ## Contributing
 
-Contributions are always welcome, we'd love to have your helping hand on `comeon`.
+Contributions are always welcome, we'd love to have your helping hand on `comeon`. See [CONTRIBUTING.md](./CONTRIBUTING.md) for more information on what we're looking for and how to get started.
 
 Your favourite document isn't covered? Add it to [lib/database.json](https://github.com/sqrthree/comeon/blob/master/lib/database.json) to help us improve it together.
 
