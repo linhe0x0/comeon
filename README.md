@@ -2,6 +2,7 @@
 
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 [![npm](https://img.shields.io/npm/v/comeon.svg)](https://www.npmjs.com/package/comeon)
+[![npm](https://img.shields.io/npm/l/comeon.svg)](https://www.npmjs.com/package/comeon)
 [![Build Status](https://travis-ci.org/sqrthree/comeon.svg?branch=master)](https://travis-ci.org/sqrthree/comeon)
 [![Coverage Status](https://coveralls.io/repos/github/sqrthree/comeon/badge.svg?branch=master)](https://coveralls.io/github/sqrthree/comeon?branch=master)
 
