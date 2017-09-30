@@ -28,7 +28,8 @@
     "lint": "standard",
     "lint-with-fix": "standard --fix",
     "test": "NODE_ENV=testing mocha --recursive",
-    "cover": "NODE_ENV=testing nyc --reporter=html --reporter=text mocha --recursive"
+    "cover": "NODE_ENV=testing nyc --reporter=html --reporter=text mocha --recursive",
+    "coveralls": "NODE_ENV=testing nyc report --reporter=text-lcov | coveralls"
   },
   "dependencies": {
     "commander": "^2.11.0",
@@ -41,6 +42,7 @@
     "validator": "^9.0.0"
   },
   "devDependencies": {
+    "coveralls": "^3.0.0",
     "mocha": "^3.5.3",
     "nyc": "^11.2.1",
     "rewire": "^2.5.2",
