@@ -15,6 +15,10 @@
     "document": "https://getbootstrap.com/docs/4.0/getting-started/introduction/",
     "homepage": "http://getbootstrap.com/"
   },
+  "element": {
+    "document": "http://element.eleme.io/#/zh-CN/component/installation",
+    "homepage": "http://element.eleme.io/"
+  },
   "node": {
     "document": "https://nodejs.org/dist/latest-v8.x/docs/api/",
     "homepage": "https://nodejs.org/"
