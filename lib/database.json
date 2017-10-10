@@ -19,6 +19,10 @@
     "document": "http://element.eleme.io/#/zh-CN/component/installation",
     "homepage": "http://element.eleme.io/"
   },
+  "next": {
+    "document": "https://github.com/zeit/next.js#how-to-use",
+    "homepage": "https://github.com/zeit/next.js"
+  },
   "node": {
     "document": "https://nodejs.org/dist/latest-v8.x/docs/api/",
     "homepage": "https://nodejs.org/"
