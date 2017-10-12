@@ -28,8 +28,8 @@
     "homepage": "https://nodejs.org/"
   },
   "react": {
-    "document": "https://facebook.github.io/react/docs/hello-world.html",
-    "homepage": "https://facebook.github.io/react/"
+    "document": "https://reactjs.org/docs/hello-world.html",
+    "homepage": "https://reactjs.org/"
   },
   "react-native": {
     "document": "http://facebook.github.io/react-native/docs/getting-started.html",
