@@ -23,6 +23,10 @@
     "document": "http://graphql.org/learn/",
     "homepage": "http://graphql.org/"
   },
+  "iview": {
+    "document": "https://www.iviewui.com/docs/guide/start",
+    "homepage": "https://www.iviewui.com/"
+  },
   "next": {
     "document": "https://github.com/zeit/next.js#how-to-use",
     "homepage": "https://github.com/zeit/next.js"
