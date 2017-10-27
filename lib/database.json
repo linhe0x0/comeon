@@ -16,8 +16,8 @@
     "homepage": "http://getbootstrap.com/"
   },
   "element": {
-    "document": "http://element.eleme.io/#/zh-CN/component/installation",
-    "homepage": "http://element.eleme.io/"
+    "document": "http://element-cn.eleme.io/#/zh-CN/component/installation",
+    "homepage": "http://element-cn.eleme.io/"
   },
   "graphql": {
     "document": "http://graphql.org/learn/",
