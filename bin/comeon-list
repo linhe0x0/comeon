@@ -1,0 +1,20 @@
+#!/usr/bin/env node
+
+var chalk = require('chalk')
+var logger = require('../lib/logger')
+var docs = require('../lib/document')
+
+logger.info()
+logger.info('  All available packages:')
+logger.info()
+
+Object.keys(docs).forEach(function (name) {
+  logger.info(
+    '  :heavy_check_mark:  '
+    + chalk.blue(name)
+    + ' - '
+    + docs[name].document
+  )
+})
+
+logger.info()

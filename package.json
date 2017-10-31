@@ -22,7 +22,8 @@
   "bin": {
     "comeon": "bin/comeon",
     "comeon-open": "bin/comeon-open",
-    "comeon-update": "bin/comeon-update"
+    "comeon-update": "bin/comeon-update",
+    "comeon-list": "bin/comeon-list"
   },
   "scripts": {
     "lint": "standard",
@@ -32,6 +33,7 @@
     "coveralls": "NODE_ENV=testing nyc report --reporter=text-lcov | coveralls"
   },
   "dependencies": {
+    "chalk": "^2.3.0",
     "commander": "^2.11.0",
     "inquirer": "^3.3.0",
     "lodash": "^4.17.4",

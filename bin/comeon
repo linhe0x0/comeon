@@ -12,6 +12,7 @@ program
     isDefault: true,
   })
   .command('update', 'update cache to keep it up-to-date with upstream')
+  .command('list', 'show package list')
 
 program.parse(process.argv)
 
