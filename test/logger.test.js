@@ -3,14 +3,6 @@
 var should = require('should')
 var logger = require('../lib/logger')
 
-describe('logger:printf', function () {
-  it('should always return "Hello, World" when print "Hello, World"', function () {
-    var result = logger.printf('Hello, World')
-
-    result.should.be.equal('Hello, World')
-  })
-})
-
 describe('logger:text', function () {
   it('should always return "Hello, World" when print "Hello, World" with text method', function () {
     var result = logger.text('Hello, World')
