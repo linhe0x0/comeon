@@ -28,6 +28,12 @@ $ npm install -g comeon
 comeon <name>
 ```
 
+### More feature
+
+```js
+$ comeon list // show all available packages
+```
+
 ## How to Update local cache?
 
 Use `comeon update` to fetch the newest data source of `comeon` from [GitHub](https://github.com/sqrthree/comeon).

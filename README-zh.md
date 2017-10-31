@@ -28,6 +28,12 @@ $ npm install -g comeon
 comeon <name>
 ```
 
+### 更多功能
+
+```js
+$ comeon list // 显示所有的 package 列表
+```
+
 ## 更新本地缓存？
 
 使用 `comeon update` 从 [GitHub](https://github.com/sqrthree/comeon) 上获取 `comeon` 最新的数据。
