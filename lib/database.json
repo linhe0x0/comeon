@@ -58,5 +58,9 @@
   "webpack": {
     "document": "https://webpack.js.org/concepts/",
     "homepage": "https://webpack.js.org/"
+  },
+  "webpack-cn": {
+    "document": "https://doc.webpack-china.org/concepts/",
+    "homepage": "https://doc.webpack-china.org/"
   }
 }
