@@ -54,5 +54,9 @@
   "vue-cn": {
     "document": "https://cn.vuejs.org/v2/guide/",
     "homepage": "https://cn.vuejs.org/"
+  },
+  "webpack": {
+    "document": "https://webpack.js.org/concepts/",
+    "homepage": "https://webpack.js.org/"
   }
 }
