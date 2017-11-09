@@ -55,6 +55,10 @@
     "document": "https://cn.vuejs.org/v2/guide/",
     "homepage": "https://cn.vuejs.org/"
   },
+  "vue-router": {
+    "document": "https://router.vuejs.org/",
+    "homepage": "https://router.vuejs.org/"
+  },
   "webpack": {
     "document": "https://webpack.js.org/concepts/",
     "homepage": "https://webpack.js.org/"
