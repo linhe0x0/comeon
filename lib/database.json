@@ -59,6 +59,10 @@
     "document": "https://router.vuejs.org/",
     "homepage": "https://router.vuejs.org/"
   },
+  "vuex": {
+    "document": "https://vuex.vuejs.org/",
+    "homepage": "https://vuex.vuejs.org/"
+  },
   "webpack": {
     "document": "https://webpack.js.org/concepts/",
     "homepage": "https://webpack.js.org/"
