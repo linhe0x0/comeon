@@ -47,6 +47,10 @@
     "document": "https://reacttraining.com/react-router/web/",
     "homepage": "https://reacttraining.com/react-router/"
   },
+  "redux": {
+    "document": "https://redux.js.org/",
+    "homepage": "https://github.com/reactjs/redux"
+  },
   "vue": {
     "document": "https://vuejs.org/v2/guide/",
     "homepage": "https://vuejs.org/"
