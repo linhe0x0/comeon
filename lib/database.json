@@ -27,6 +27,10 @@
     "document": "https://www.iviewui.com/docs/guide/start",
     "homepage": "https://www.iviewui.com/"
   },
+  "koa": {
+    "document": "http://koajs.com/#application",
+    "homepage": "http://koajs.com/"
+  },
   "next": {
     "document": "https://github.com/zeit/next.js#how-to-use",
     "homepage": "https://github.com/zeit/next.js"
