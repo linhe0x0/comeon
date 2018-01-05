@@ -39,6 +39,10 @@
     "document": "https://nodejs.org/dist/latest-v8.x/docs/api/",
     "homepage": "https://nodejs.org/"
   },
+  "prop-types": {
+    "document": "https://github.com/facebook/prop-types#usage",
+    "homepage": "https://github.com/facebook/prop-types"
+  },
   "react": {
     "document": "https://reactjs.org/docs/hello-world.html",
     "homepage": "https://reactjs.org/"
