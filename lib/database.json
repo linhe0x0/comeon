@@ -59,6 +59,10 @@
     "document": "https://redux.js.org/",
     "homepage": "https://github.com/reactjs/redux"
   },
+  "styled-jsx": {
+    "document": "https://github.com/zeit/styled-jsx#getting-started",
+    "homepage": "https://github.com/zeit/styled-jsx"
+  },
   "vue": {
     "document": "https://vuejs.org/v2/guide/",
     "homepage": "https://vuejs.org/"
