@@ -15,6 +15,10 @@
     "document": "https://getbootstrap.com/docs/4.0/getting-started/introduction/",
     "homepage": "http://getbootstrap.com/"
   },
+  "docker": {
+    "document": "https://docs.docker.com/",
+    "homepage": "https://www.docker.com/"
+  },
   "element": {
     "document": "http://element-cn.eleme.io/#/zh-CN/component/installation",
     "homepage": "http://element-cn.eleme.io/"
