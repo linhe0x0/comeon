@@ -3,6 +3,10 @@
 var cache = require('../lib/cache')
 var logger = require('../lib/logger')
 
+/**
+ * Fetch latest data from remote server and save it to local cache file.
+ * @return {[type]} [description]
+ */
 cache.update().then(function () {
   logger.success('Already up-to-date.')
   logger.footer()
