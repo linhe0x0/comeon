@@ -41,7 +41,7 @@
     "opn": "^5.1.0",
     "request": "^2.83.0",
     "update-notifier": "^2.5.0",
-    "validator": "^9.0.0"
+    "validator": "^9.4.1"
   },
   "devDependencies": {
     "coveralls": "^3.0.0",
