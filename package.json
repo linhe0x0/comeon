@@ -39,7 +39,7 @@
     "lodash": "^4.17.10",
     "node-emoji": "^1.8.1",
     "opn": "^5.1.0",
-    "request": "^2.83.0",
+    "request": "^2.85.0",
     "update-notifier": "^2.5.0",
     "validator": "^9.4.1"
   },
