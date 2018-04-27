@@ -3,26 +3,82 @@
 var program = require('commander')
 var os = require('os')
 var opn = require('opn')
+var request = require('request')
+var hostedGitInfo = require('hosted-git-info')
 var logger = require('../lib/logger')
 var docs = require('../lib/document')
+var loading = require('../lib/loading')
 
-var openDocument = function openDocument (name) {
-  var doc = docs[name]
+/**
+ * Fetch metadata with npm api.
+ *
+ * See https://github.com/npm/registry/blob/master/docs/responses/package-metadata.md#full-metadata-format
+ * to get more details.
+ * @param  {string} package name of package
+ * @return {promise} with url of package
+ */
+var fetchMetadataFromNPMServer = function fetchMetaDataFromNPMServer (package) {
+  loading.start(':mag:  Fetching data from npm server.')
 
-  if (!doc) {
-    logger.error('Document ' + name + ' is not found.')
-    logger.contribute()
-    return
-  }
+  return new Promise(function (resolve, reject) {
+    request({
+      url: 'https://registry.npmjs.org/' + package,
+      headers: {
+        'User-Agent': 'comeon',
+      }
+    }, function (err, response, body) {
+      loading.stop()
 
-  var url = doc.document || doc.homepage
+      if (err) return reject(err)
 
-  if (!url) {
-    logger.error('the document or homepage of document ' + name + ' is not found.')
-    logger.contribute()
-    return
-  }
+      if (response.statusCode >= 400) {
+        return reject(new Error(response.body))
+      }
 
+      return resolve(body)
+    })
+  })
+}
+
+/**
+ * Resolve url from npm api.
+ */
+var getURLFromNPM = function getURLFromNPM (package) {
+  return new Promise(function (resolve, reject) {
+    fetchMetadataFromNPMServer(package).then(function (metadata) {
+      var data = JSON.parse(metadata)
+
+      if (data.homepage) return resolve(data.homepage)
+
+      if (!data.repository) return reject(new Error('no repository'))
+
+      var info = hostedGitInfo.fromUrl(data.repository.url)
+
+      var url = info ? info.docs() : unknownHostedUrl(data.repository.url)
+
+      if (!url) return reject(new Error('no repository: could not get url'))
+
+      return resolve(url)
+    }).catch(reject)
+  })
+}
+
+var unknownHostedUrl = function unknownHostedUrl (url) {
+  try {
+    var idx = url.indexOf('@')
+    if (idx !== -1) {
+      url = url.slice(idx + 1).replace(/:([^\d]+)/, '/$1')
+    }
+    url = url_.parse(url)
+    var protocol = url.protocol === 'https:'
+      ? 'https:'
+      : 'http:'
+    return protocol + '//' + (url.host || '') +
+      url.path.replace(/\.git$/, '')
+  } catch (e) {}
+}
+
+var openBrowser = function openBrowser (url) {
   var platform = os.platform()
 
   var options = {}
@@ -31,11 +87,39 @@ var openDocument = function openDocument (name) {
     options.wait = false
   }
 
-  opn(url, options).then(function () {
+  return opn(url, options).then(function () {
+    return Promise.resolve(url)
+  })
+}
+
+var getURL = function getURL (name) {
+  var doc = docs[name]
+
+  if (!doc) {
+    logger.error('Document ' + name + ' is not found.')
+    return getURLFromNPM(name)
+  }
+
+  var url = doc.document || doc.homepage
+
+  if (!url) {
+    return getURLFromNPM(name)
+  }
+
+  return Promise.resolve(url)
+}
+
+var openDocument = function openDocument (name) {
+  getURL(name).then((url) => {
+    return openBrowser(url)
+  }).then(function (url) {
     logger.info(':link:  Opened ' + url)
     logger.footer()
 
     process.exit(0)
+  }).catch(function (err) {
+    logger.error(err)
+    process.exit(1)
   })
 }
 
