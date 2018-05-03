@@ -11,6 +11,10 @@
     "document": "https://ant.design/docs/react/introduce-cn",
     "homepage": "https://ant.design"
   },
+  "axios": {
+    "document": "https://github.com/axios/axios#axios",
+    "homepage": "https://github.com/axios/axios"
+  },
   "bootstrap": {
     "document": "https://getbootstrap.com/docs/4.0/getting-started/introduction/",
     "homepage": "http://getbootstrap.com/"
