@@ -36,7 +36,7 @@
     "chalk": "^2.4.1",
     "commander": "^2.16.0",
     "hosted-git-info": "^2.6.0",
-    "inquirer": "^5.2.0",
+    "inquirer": "^6.0.0",
     "lodash": "^4.17.10",
     "node-emoji": "^1.8.1",
     "opn": "^5.3.0",
