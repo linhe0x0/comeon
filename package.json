@@ -28,7 +28,7 @@
   "scripts": {
     "lint": "standard",
     "lint-with-fix": "standard --fix",
-    "test": "NODE_ENV=testing mocha --recursive --exit",
+    "test": "NODE_ENV=testing mocha --recursive --timeout 10000 --exit",
     "cover": "NODE_ENV=testing nyc --reporter=html --reporter=text mocha --recursive --exit",
     "coveralls": "NODE_ENV=testing nyc report --reporter=text-lcov | coveralls"
   },
