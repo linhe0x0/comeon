@@ -42,7 +42,7 @@
     "opn": "^5.3.0",
     "request": "^2.88.0",
     "update-notifier": "^2.5.0",
-    "validator": "^10.7.0"
+    "validator": "^11.0.0"
   },
   "devDependencies": {
     "coveralls": "^3.0.2",
