@@ -33,7 +33,7 @@
     "coveralls": "NODE_ENV=testing nyc report --reporter=text-lcov | coveralls"
   },
   "dependencies": {
-    "chalk": "^2.4.2",
+    "chalk": "^4.0.0",
     "commander": "^4.0.0",
     "hosted-git-info": "^3.0.0",
     "inquirer": "^7.0.0",
