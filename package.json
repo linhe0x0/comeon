@@ -34,7 +34,7 @@
   },
   "dependencies": {
     "chalk": "^2.4.2",
-    "commander": "^4.0.0",
+    "commander": "^5.1.0",
     "hosted-git-info": "^3.0.0",
     "inquirer": "^7.0.0",
     "lodash": "^4.17.15",
